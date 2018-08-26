@@ -1,0 +1,145 @@
+$light-gray: #F2F2F2;
+$gray: #D1D2D3;
+$dark-gray: #666666;
+$blue: #34D1D1;
+$dark-purple: #2F2235;
+$light-purple: #3F3244;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+main {
+  padding: 4%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $light-purple;
+  height: 4em;
+
+  .student-name, .icon {
+    margin: 3%;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 1.2em;
+
+    span {
+      color: $blue;
+    }
+  }
+}
+
+section {
+  margin: auto 3% auto 3%;
+}
+
+.view-code {
+  width: 30%;
+  margin: auto;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 0.9em;
+  width: 25%;
+  display: inline-block;
+  padding-right: 3%;
+}
+
+.line {
+  background: $light-gray;
+  height: 2px;
+  width: 100%;
+  z-index: -1;
+}
+
+.tab-content-header {
+  font-size: 1.1em;
+  display: block;
+  margin-bottom: 3%;
+}
+
+.tab-text {
+  padding: 3%;
+}
+
+.accordion {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5%;
+
+  img {
+    height: 35vh;
+    width:35%;
+    margin: 4%;
+  }
+
+  label {
+    flex-grow: 1;
+    order: 1;
+    display: block;
+    padding: 1rem 2rem;
+    margin-right: 2px;
+    cursor: pointer;
+    background: #F2F2F2;
+    transition: background ease 0.3s;
+  }
+
+  .tab {
+    order: 99;
+    flex-grow: 1;
+    width: 100%;
+    display: none;
+    background: #fff;
+  }
+
+}
+
+.accordion input[type="radio"] {
+  display: none;
+}
+
+.accordion input[type="radio"]:checked + label {
+  background: #fff;
+  border: $gray 1px solid;
+  border-bottom: #fff;
+  z-index: 1;
+  margin-bottom: -1px;
+}
+
+.accordion input[type="radio"]:checked + label + .tab {
+  display: flex;
+  border: $gray 1px solid;
+}
+
+@media (max-width: 45em) {
+  .accordion .tab,
+  .accordion label {
+    order: initial;
+  }
+
+  .accordion label {
+    width: 100%;
+  }
+}
