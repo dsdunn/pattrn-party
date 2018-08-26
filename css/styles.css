@@ -8,6 +8,8 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 125%;
   margin: 0;
 }
 
@@ -24,12 +26,21 @@ header {
 }
 header .student-name, header .icon {
   margin: 3%;
-  color: #fff;
+  color: white;
   font-weight: lighter;
   font-size: 1.2em;
 }
 header .student-name span, header .icon span {
   color: #34D1D1;
+}
+
+.sandbox {
+  width: 85%;
+  margin: 3% auto;
+}
+
+.hidden {
+  display: none;
 }
 
 section {
@@ -38,11 +49,15 @@ section {
 
 .view-code {
   width: 30%;
-  margin: auto;
+  margin-left: 35%;
+  padding: 1%;
+  background-color: #2F2235;
+  color: white;
 }
 
 .caps {
   text-transform: uppercase;
+  font-weight: 100;
 }
 
 .title-container {
@@ -100,7 +115,7 @@ section {
   flex-grow: 1;
   width: 100%;
   display: none;
-  background: #fff;
+  background: white;
 }
 
 .accordion input[type=radio] {
@@ -108,9 +123,9 @@ section {
 }
 
 .accordion input[type=radio]:checked + label {
-  background: #fff;
+  background: white;
   border: #D1D2D3 1px solid;
-  border-bottom: #fff;
+  border-bottom: white;
   z-index: 1;
   margin-bottom: -1px;
 }

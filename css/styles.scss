@@ -15,6 +15,8 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 125%;
   margin: 0;
 }
 
@@ -31,7 +33,7 @@ header {
 
   .student-name, .icon {
     margin: 3%;
-    color: #fff;
+    color: white;
     font-weight: lighter;
     font-size: 1.2em;
 
@@ -41,17 +43,30 @@ header {
   }
 }
 
+.sandbox {
+  width: 85%;
+  margin: 3% auto;
+}
+
+.hidden {
+  display:none;
+}
+
 section {
   margin: auto 3% auto 3%;
 }
 
 .view-code {
   width: 30%;
-  margin: auto;
+  margin-left: 35%;
+  padding: 1%;
+  background-color: $dark-purple;
+  color: white;
 }
 
 .caps {
   text-transform: uppercase;
+  font-weight: 100;
 }
 
 .title-container {
@@ -102,7 +117,7 @@ section {
     padding: 1rem 2rem;
     margin-right: 2px;
     cursor: pointer;
-    background: #F2F2F2;
+    background: $light-gray;
     transition: background ease 0.3s;
   }
 
@@ -111,7 +126,7 @@ section {
     flex-grow: 1;
     width: 100%;
     display: none;
-    background: #fff;
+    background: white;
   }
 
 }
@@ -121,9 +136,9 @@ section {
 }
 
 .accordion input[type="radio"]:checked + label {
-  background: #fff;
+  background: white;
   border: $gray 1px solid;
-  border-bottom: #fff;
+  border-bottom: white;
   z-index: 1;
   margin-bottom: -1px;
 }
@@ -132,6 +147,15 @@ section {
   display: flex;
   border: $gray 1px solid;
 }
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 45em) {
   .accordion .tab,
