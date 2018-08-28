@@ -44,7 +44,7 @@ header {
 }
 
 .sandbox {
-  width: 85%;
+  width: 90%;
   margin: 3% auto;
 }
 
@@ -53,7 +53,7 @@ header {
 }
 
 section {
-  margin: auto 3% auto 3%;
+  margin: auto 3% 3% 3%;
 }
 
 .view-code {
@@ -105,9 +105,9 @@ section {
   margin: 5%;
 
   img {
-    height: 35vh;
+    height: 40vh;
     width:35%;
-    margin: 4%;
+    margin: 5%;
   }
 
   label {
@@ -148,22 +148,97 @@ section {
   border: $gray 1px solid;
 }
 
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 90%;
+  margin: 4% auto;
+  grid-gap: 0.7em;
 
 
+}
 
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid black;
+  // margin: 0.7em;
+  
+  h4 {
+    padding: 0.6em;
+    margin: 0;
+    font-size: 0.9em;
+    white-space: nowrap;
+    overflow: auto;
+  }
 
+  img {
+    width: 100%;
+    margin: 0;
+    height: 9em;
+  }
 
+}
 
+.card-one, .card-seven {
+  grid-column: span 2;
+}
 
+@media (max-width: 950px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
+@media (max-width: 55em) {
 
-@media (max-width: 45em) {
+  html {
+    font-size: 0.9em;
+  }
+
+  header {
+    flex-direction: column;
+    justify-content: space-around;
+
+    .student-name {
+      font-size: 0.7em;
+    }
+  }
+
   .accordion .tab,
   .accordion label {
     order: initial;
+    margin-right: 0;
   }
 
   .accordion label {
     width: 100%;
   }
+
+  .tab {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 100%;
+      max-height: 10em;
+      margin: auto;
+    }
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card {
+    margin-bottom: 0.4em;
+  }
 }
+
+
+
+
+
+
