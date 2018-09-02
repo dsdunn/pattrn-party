@@ -53,7 +53,7 @@ header {
 }
 
 section {
-  margin: auto 3% 3% 3%;
+  margin: auto 3% 3% 10%;
 }
 
 .view-code {
@@ -128,7 +128,6 @@ section {
     display: none;
     background: white;
   }
-
 }
 
 .accordion input[type="radio"] {
@@ -154,8 +153,6 @@ section {
   width: 90%;
   margin: 4% auto;
   grid-gap: 0.7em;
-
-
 }
 
 .card {
@@ -178,16 +175,39 @@ section {
     margin: 0;
     height: 9em;
   }
-
 }
 
 .card-one, .card-seven {
   grid-column: span 2;
 }
 
+.menu-section {
+  width: 90%;
+  margin: auto;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  padding: 3%;
+  margin: 0;
+  list-style-type: none;
+  background-color: $gray;
+  // width: 90%;
+
+  a {
+    text-decoration: none;
+  }
+}
+
 @media (max-width: 950px) {
   .card-container {
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 6%;
+  }
+
+  .card-seven {
+    grid-row: 4;
   }
 }
 
@@ -235,7 +255,10 @@ section {
   .card {
     margin-bottom: 0.4em;
   }
+
 }
+
+
 
 
 
