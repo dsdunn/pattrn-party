@@ -44,7 +44,7 @@ header .student-name span, header .icon span {
 }
 
 section {
-  margin: auto 3% 3% 10%;
+  margin: auto 3% 5% 3%;
 }
 
 .view-code {
@@ -167,17 +167,38 @@ section {
 }
 
 .menu-section {
-  width: 90%;
+  width: 85%;
   margin: auto;
 }
 
 .nav-list {
   display: flex;
+  position: relative;
   justify-content: space-around;
   padding: 3%;
   margin: 0;
   list-style-type: none;
   background-color: #D1D2D3;
+}
+.nav-list button {
+  background: url("../images/search-icon.svg");
+  background-repeat: no-repeat;
+  text-align: right;
+  position: absolute;
+  position: top left;
+  z-index: 2;
+  width: 2em;
+  height: 1.5em;
+  border: none;
+}
+.nav-list button:hover {
+  background-color: #3F3244;
+}
+.nav-list input {
+  width: 100%;
+}
+.nav-list input::placeholder {
+  text-align: right;
 }
 .nav-list a {
   text-decoration: none;
