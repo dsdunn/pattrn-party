@@ -191,7 +191,17 @@ section {
 .nav-list .menu-toggle {
   display: none;
 }
-.nav-list button {
+.nav-list a {
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-button {
   background: url("../images/search-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -203,29 +213,63 @@ section {
   height: 1.8em;
   border: none;
 }
-.nav-list button:hover {
+.search-button:hover {
   background-color: #3F3244;
 }
-.nav-list .search-bar {
-  display: flex;
-}
-.nav-list input {
+
+.search-input {
   display: flex;
   height: 1.8em;
   border: none;
-  padding: 2% 2% 3% 3%;
-  width: 85%;
+  width: 100%;
 }
-.nav-list input::placeholder {
+.search-input::placeholder {
   font-size: 0.8em;
   font-weight: 300;
 }
-.nav-list a {
-  text-decoration: none;
-  font-size: 1rem;
+
+.mobile-menu {
+  display: none;
 }
 
 @media (max-width: 950px) {
+  body {
+    font-size: 140%;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  section {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .header-bar-section {
+    margin-bottom: 8%;
+  }
+
+  .view-code {
+    width: 90%;
+    margin-left: 5%;
+    height: 2em;
+  }
+
+  .title-container {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin: 6% auto 4% auto;
+  }
+  .title-container .line {
+    width: 25%;
+  }
+  .title-container .section-title {
+    padding: 0;
+  }
+
   .card-container {
     grid-template-columns: 1fr 1fr;
     margin-bottom: 6%;
@@ -233,6 +277,49 @@ section {
 
   .card-seven {
     grid-row: 4;
+  }
+
+  .nav-list {
+    margin-bottom: 0;
+    justify-content: space-between;
+    padding: 4%;
+  }
+  .nav-list .menu-toggle {
+    display: block;
+    float: right;
+  }
+  .nav-list .logo {
+    height: 3.5em;
+    width: 3.5em;
+  }
+
+  .header-item {
+    display: none;
+  }
+  .header-item button, .header-item input {
+    display: none;
+  }
+
+  .menu-toggle {
+    font-size: 150%;
+  }
+
+  .mobile-menu {
+    display: block;
+    list-style-type: none;
+    width: 85%;
+    margin: 0 auto 7% auto;
+    padding: 2%;
+    background-color: #F2F2F2;
+    color: #666666;
+  }
+  .mobile-menu li:not(.search-bar) {
+    padding: 3%;
+  }
+  .mobile-menu .search-bar {
+    border: 1px solid #666666;
+    margin: 1%;
+    height: 1.9em;
   }
 }
 @media (max-width: 55em) {
@@ -275,6 +362,10 @@ section {
 
   .card {
     margin-bottom: 0.4em;
+  }
+
+  .mobile-menu li:not(.search-bar) {
+    padding: 8%;
   }
 }
 

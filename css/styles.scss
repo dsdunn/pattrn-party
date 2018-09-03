@@ -213,43 +213,48 @@ section {
     display: none;
   }
 
-  button {
-    background: url('../images/search-icon.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    position: inline-block;
-    background-color: white;
-    border-right: none;
-    z-index: 2;
-    width: 2.3em;
-    height: 1.8em;
-    border: none;
-
-    &:hover {
-      background-color: $light-purple;
-    }
-  }
-
-  .search-bar {
-    display: flex;
-  }
-
-  input {
-    display: flex;
-    height: 1.8em;
-    border: none;
-    padding: 2% 2% 3% 3%;
-    width: 85%;
-
-      &::placeholder { 
-        font-size: 0.8em;
-        font-weight: 300;
-    }
-  }
   a {
     text-decoration: none;
     font-size: 1rem;
   }
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-button {
+  background: url('../images/search-icon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  position: inline-block;
+  background-color: white;
+  border-right: none;
+  z-index: 2;
+  width: 2.3em;
+  height: 1.8em;
+  border: none;
+
+  &:hover {
+    background-color: $light-purple;
+  }
+}
+
+.search-input {
+  display: flex;
+  height: 1.8em;
+  border: none;
+  width: 100%;
+
+    &::placeholder { 
+      font-size: 0.8em;
+      font-weight: 300;
+  }
+}
+
+.mobile-menu {
+  display: none;
 }
 
 
@@ -257,6 +262,46 @@ section {
 
 
 @media (max-width: 950px) {
+
+  body {
+    font-size: 140%;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  section {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .header-bar-section {
+    margin-bottom: 8%;
+  }
+
+  .view-code {
+    width: 90%;
+    margin-left: 5%;
+    height: 2em;
+  }
+
+  .title-container {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin: 6% auto 4% auto;
+
+    .line {
+      width: 25%;
+    }
+
+    .section-title {
+      padding: 0;
+    }
+  }
+
   .card-container {
     grid-template-columns: 1fr 1fr;
     margin-bottom: 6%;
@@ -264,6 +309,55 @@ section {
 
   .card-seven {
     grid-row: 4;
+  }
+
+  .nav-list {
+    margin-bottom: 0;
+    justify-content: space-between;
+    padding: 4%;
+
+    .menu-toggle {
+      display: block;
+      float: right;
+    }
+
+    .logo {
+      height: 3.5em;
+      width: 3.5em;
+    }
+  }
+
+  .header-item {
+    display: none;
+
+    button, input {
+      display: none;
+    }
+  }
+
+  .menu-toggle {
+    font-size: 150%;
+  }
+
+
+  .mobile-menu {
+    display: block;
+    list-style-type: none;
+    width: 85%;
+    margin: 0 auto 7% auto;
+    padding: 2%;
+    background-color: $light-gray;
+    color: $dark-gray;
+
+    li:not(.search-bar) {
+      padding: 3%;
+    }
+
+    .search-bar {
+      border: 1px solid $dark-gray;
+      margin: 1%;
+      height: 1.9em;
+    }
   }
 }
 
@@ -311,6 +405,10 @@ section {
   .card {
     margin-bottom: 0.4em;
   }
+
+  .mobile-menu li:not(.search-bar) {
+      padding: 8%;
+    }
 
 }
 
