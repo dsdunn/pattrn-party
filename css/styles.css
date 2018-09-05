@@ -54,6 +54,11 @@ section {
   background-color: #2F2235;
   color: white;
 }
+.view-code:hover {
+  background-color: #e7e4e9;
+  color: #2F2235;
+  cursor: pointer;
+}
 
 .caps {
   text-transform: uppercase;
@@ -139,7 +144,8 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 90%;
-  margin: 5%;
+  max-width: 1200px;
+  margin: 5% auto 5% auto;
   grid-gap: 0.7em;
 }
 
@@ -179,7 +185,7 @@ section {
   margin: 4% auto;
   list-style-type: none;
   background-color: #D1D2D3;
-  width: 85%;
+  width: 90%;
   height: 4em;
 }
 .nav-list .logo {
@@ -194,6 +200,11 @@ section {
 .nav-list a {
   text-decoration: none;
   font-size: 1rem;
+}
+.nav-list a:hover {
+  color: #6e4986;
+  font-size: 1em;
+  cursor: pointer;
 }
 
 .search-bar {
@@ -280,13 +291,17 @@ section {
   }
 
   .nav-list {
-    margin-bottom: 0;
     justify-content: space-between;
     padding: 4%;
   }
   .nav-list .menu-toggle {
     display: block;
     float: right;
+    font-size: 150%;
+  }
+  .nav-list .menu-toggle:hover {
+    cursor: pointer;
+    background-color: #e7e4e9;
   }
   .nav-list .logo {
     height: 3.5em;
@@ -300,15 +315,10 @@ section {
     display: none;
   }
 
-  .menu-toggle {
-    font-size: 150%;
-  }
-
   .mobile-menu {
-    display: block;
     list-style-type: none;
-    width: 85%;
-    margin: 0 auto 7% auto;
+    width: 90%;
+    margin: -4% auto 7% auto;
     padding: 2%;
     background-color: #F2F2F2;
     color: #666666;
@@ -316,13 +326,22 @@ section {
   .mobile-menu li:not(.search-bar) {
     padding: 3%;
   }
+  .mobile-menu li:not(.search-bar):hover {
+    background-color: #e7e4e9;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
   .mobile-menu .search-bar {
     border: 1px solid #666666;
-    margin: 1%;
+    margin: 3% 1%;
     height: 1.9em;
   }
+
+  .visible {
+    display: block;
+  }
 }
-@media (max-width: 55em) {
+@media (max-width: 750px) {
   html {
     font-size: 0.9em;
   }
