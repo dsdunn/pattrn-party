@@ -172,10 +172,6 @@ section {
   grid-column: span 2;
 }
 
-.menu-section {
-  margin: auto;
-}
-
 .nav-list {
   display: flex;
   align-items: center;
@@ -301,7 +297,9 @@ section {
   }
   .nav-list .menu-toggle:hover {
     cursor: pointer;
+    padding: 1%;
     background-color: #e7e4e9;
+    font-size: 2.2rem;
   }
   .nav-list .logo {
     height: 3.5em;

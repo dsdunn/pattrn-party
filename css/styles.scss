@@ -193,10 +193,6 @@ section {
 
 // ------------start menu section--------------- 
 
-.menu-section {
-  margin: auto;
-}
-
 .nav-list {
   display: flex;
   align-items: center;
@@ -335,7 +331,9 @@ section {
 
       &:hover {
         cursor: pointer;
+        padding: 1%;
         background-color: #e7e4e9;
+        font-size: 2.2rem;
       }
     }
 
